@@ -1,0 +1,37 @@
+host = sql.example.com
+user = user
+password = pass
+port = 3306
+
+;path to mysqldump executable
+mysqldump = /usr/bin/mysqldump
+
+;can be relative to the .dbgitckup script or absolute path
+;without trailing slash
+dumpsFolder = dumps
+
+;run with the given priority
+;19 is the lowest
+nice = 19
+
+;folder name for storing the given database dump
+[database1]
+;database (only if different from folder name)
+db = database1A
+
+;flag for disabling this dump
+;active = 0
+
+;table names - space delimited; if empty the whole database would be dumped
+tableNames = 
+
+;after each dump and commit do the 'git gc'
+;gc = 1
+
+[database2]
+
+;table names - space delimited; if empty the whole database would be dumped
+tableNames = 
+
+;after each dump and commit do the 'git gc'
+gc = 1
